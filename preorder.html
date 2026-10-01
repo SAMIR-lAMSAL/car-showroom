@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-Order | Hamro Motors</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="preorder">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero compact"><div class="container"><div class="eyebrow">RESERVE YOUR VEHICLE</div><h1>Pre-order with <span>confidence.</span></h1><p>Send your vehicle request directly to Hamro Motors for follow-up.</p></div></section>
+    <section class="section section-dark">
+      <div class="container preorder-layout">
+        <aside id="preorder-car" class="preorder-car glass-panel"></aside>
+        <form id="preorder-form" class="glass-panel form-card">
+          <div class="eyebrow">REQUEST DETAILS</div>
+          <h2>Your vehicle, <span>your specification.</span></h2>
+          <div class="form-grid">
+            <label>Full name<input name="name" required placeholder="Your full name"></label>
+            <label>Phone number<input name="phone" required placeholder="+977 98XXXXXXXX"></label>
+            <label>Email<input type="email" name="email" required placeholder="you@example.com"></label>
+            <label>Address<input name="address" required placeholder="City / area"></label>
+            <label>Vehicle<select name="vehicle" id="preorder-vehicle" required></select></label>
+            <label>Preferred color<select name="color"><option value="">Select a color</option><option>Black</option><option>Obsidian Black</option><option>Pearl White</option><option>Guards Red</option><option>Grey</option><option>Silver</option><option>Other</option></select></label>
+            <label>Configuration<input name="configuration" placeholder="e.g. Executive package"></label>
+            <label>Quantity<input name="quantity" type="number" min="1" value="1" required></label>
+          </div>
+          <label>Additional message<textarea name="message" rows="5" placeholder="Anything you would like the showroom to know..."></textarea></label>
+          <div class="notice">Your request is securely sent to the Hamro Motors showroom system for follow-up.</div>
+          <button class="btn btn-primary btn-wide" type="submit">Submit pre-order request →</button>
+        </form>
+      </div>
+      <div id="preorder-success" class="success-card hidden"></div>
+    </section>
+  </main>
+  <div id="site-footer"></div><div id="ai-assistant"></div><div id="toast-container"></div>
+  <script src="data/cars.js"></script><script src="js/main.js"></script><script src="js/preorder.js"></script>
+</body>
+</html>

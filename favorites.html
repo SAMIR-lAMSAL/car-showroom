@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Favorites | Hamro Motors</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="favorites">
+<div id="site-header"></div>
+<main>
+<section class="page-hero compact"><div class="container"><div class="eyebrow">YOUR SHORTLIST</div><h1>Saved <span>vehicles.</span></h1><p>Your favorites are stored locally in this browser—no account required.</p></div></section>
+<section class="section section-dark"><div class="container"><div class="results-bar"><span id="favorites-count"></span><button class="btn btn-ghost" id="clear-favorites">Clear all</button></div><div class="car-grid" id="favorites-grid"></div><div id="favorites-empty" class="empty-state hidden"><div class="empty-icon">♡</div><h3>Your shortlist is empty</h3><p>Save a vehicle with the heart icon and it will appear here.</p><a class="btn btn-outline" href="cars.html">Explore vehicles</a></div></div></section>
+</main><div id="site-footer"></div><div id="ai-assistant"></div><div id="toast-container"></div><script src="data/cars.js"></script><script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', ()=>{ renderFavoritesPage(); document.getElementById('clear-favorites').onclick=()=>{localStorage.removeItem('showroom_favorites');renderFavoritesPage();showToast('Favorites cleared.');}; });
+function renderFavoritesPage(){const ids=getFavorites();const cars=inventory().filter(c=>ids.includes(c.id));document.getElementById('favorites-count').textContent=cars.length+' saved vehicle'+(cars.length===1?'':'s');document.getElementById('favorites-grid').innerHTML=cars.map(carCard).join('');document.getElementById('favorites-empty').classList.toggle('hidden',cars.length>0);bindCarCardActions();}
+</script>
+</body></html>

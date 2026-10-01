@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars | Hamro Motors</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cars">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow">THE COLLECTION</div>
+        <h1>Explore our <span>vehicles.</span></h1>
+        <p>Search, filter and discover the right vehicle from our premium local inventory.</p>
+      </div>
+    </section>
+    <section class="section section-dark">
+      <div class="container">
+        <div class="inventory-toolbar glass-panel">
+          <div class="search-field"><span>⌕</span><input id="inventory-search" type="search" placeholder="Search brand, model, body type, fuel..."></div>
+          <select id="sort-select"><option value="featured">Featured</option><option value="price-asc">Price: Low to High</option><option value="price-desc">Price: High to Low</option><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="name">Name A–Z</option></select>
+          <button class="btn btn-ghost" id="clear-filters">Clear filters</button>
+        </div>
+        <div class="filter-grid">
+          <label>Brand<select id="filter-brand"><option value="">All brands</option></select></label>
+          <label>Body type<select id="filter-body"><option value="">All body types</option></select></label>
+          <label>Fuel<select id="filter-fuel"><option value="">All fuels</option></select></label>
+          <label>Transmission<select id="filter-transmission"><option value="">All transmissions</option></select></label>
+          <label>Year<select id="filter-year"><option value="">All years</option></select></label>
+          <label>Price range<select id="filter-price"><option value="">Any price</option><option value="0-5000000">Under रु 50 lakh</option><option value="5000000-10000000">रु 50 lakh – 1 crore</option><option value="10000000-15000000">रु 1 – 1.5 crore</option><option value="15000000-999999999">Above रु 1.5 crore</option></select></label>
+        </div>
+        <div class="results-bar"><span id="result-count"></span><span id="filter-summary"></span></div>
+        <div class="car-grid" id="inventory-grid"></div>
+        <div class="empty-state hidden" id="no-results"><div class="empty-icon">⌁</div><h3>No vehicles found</h3><p>Try changing your search or clearing one of the filters.</p><button class="btn btn-outline" id="empty-clear">Reset inventory</button></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div><div id="ai-assistant"></div><div id="toast-container"></div>
+  <script src="data/cars.js"></script><script src="js/main.js"></script><script src="js/cars.js"></script>
+</body>
+</html>
